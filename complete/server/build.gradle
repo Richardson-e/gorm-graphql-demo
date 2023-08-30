@@ -2,6 +2,7 @@ buildscript {
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
         maven { url "https://plugins.gradle.org/m2/" }
+        mavenLocal()
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -23,6 +24,7 @@ apply plugin:"org.grails.plugins.views-json"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
+    mavenLocal()
 }
 
 configurations {
@@ -54,10 +56,12 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.4.0.Final"
     compile "org.grails.plugins:views-json"
     compile "org.grails.plugins:views-json-templates"
+    implementation "org.grails:gorm-graphql:1.0.2"
+    implementation "org.grails.plugins:gorm-graphql-plugin:3.0.0-SNAPSHOT"
 
 //tag::graphqldependency[]
-    compile "org.grails:gorm-graphql:1.0.2"
-    compile "org.grails.plugins:gorm-graphql:1.0.2"
+
+//    compile "org.grails.plugins:gorm-graphql:1.0.2"
 //end::graphqldependency[]
 
     compileOnly "io.micronaut:micronaut-inject-groovy"
