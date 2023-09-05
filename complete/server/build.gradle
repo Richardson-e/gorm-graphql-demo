@@ -22,9 +22,9 @@ apply plugin:"com.github.node-gradle.node"
 //apply plugin:"org.grails.plugins.views-json"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
-    mavenLocal()
 }
 
 configurations {
