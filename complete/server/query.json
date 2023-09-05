@@ -1,7 +1,0 @@
-query {
-  speaker(id: 1) {
-    firstName
-    lastName
-    bio
-  }
-}
