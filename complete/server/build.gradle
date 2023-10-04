@@ -22,9 +22,10 @@ apply plugin:"com.github.node-gradle.node"
 //apply plugin:"org.grails.plugins.views-json"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
-    mavenLocal()
+
 }
 
 configurations {
@@ -58,6 +59,7 @@ dependencies {
     implementation "org.hibernate:hibernate-core:5.6.11.Final"
     implementation "org.grails.plugins:views-json"
     implementation "org.grails.plugins:views-json-templates"
+    implementation "org.grails:gorm-graphql:1.0.2"
 
 //tag::graphqldependency[]
     implementation "org.grails.plugins:gorm-graphql-plugin:3.0.0-SNAPSHOT"

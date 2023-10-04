@@ -1,7 +1,7 @@
 package com.objectcomputing
 
 import grails.rest.Resource
-import org.grails.gorm.graphql.entity.dsl.GraphQLMapping
+import org.grails.gorm.graphql.entity.dsl.*
 import java.time.LocalDate
 import java.time.Period
 
